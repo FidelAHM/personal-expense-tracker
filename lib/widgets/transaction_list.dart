@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:expense_app/models/transaction.dart';
 import 'package:intl/intl.dart';
 import './transaction_list.dart';
-import './user_transaction.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
@@ -35,7 +34,7 @@ class TransactionList extends StatelessWidget {
                 children: [
                   Text(
                     transactions[index].title,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                   Text(
                     DateFormat.yMMMEd().format(transactions[index].date),
